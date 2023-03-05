@@ -1,8 +1,15 @@
-import logo from "./logo.svg";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Chat from "./pages/chat";
 
 function App() {
-  return <h1>This is the home page.</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
