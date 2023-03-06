@@ -11,11 +11,11 @@ export default function Chat() {
       setShow(true);
     }
   }
-  
+
   return (
     <section>
       <button onClick={handleClik}>Show element</button>
-      {show && <div>This is the element to show.</div>}
+      <div>{show && <span id="span">This is the element to show.</span>}</div>
     </section>
   );
 }
