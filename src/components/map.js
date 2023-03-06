@@ -18,7 +18,7 @@ function Map() {
   const [zoom, setZoom] = useState(13);
 
   return (
-    <section className="maps">
+    <div className="maps">
       <MapContainer
         center={position}
         zoom={zoom}
@@ -38,7 +38,7 @@ function Map() {
           </Popup>
         </Marker>
       </MapContainer>
-    </section>
+    </div>
   );
 }
 
