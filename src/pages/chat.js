@@ -16,7 +16,7 @@ export default function Chat() {
   return (
     <section>
       <button onClick={handleClik}>Show element</button>
-      <div>{show && <Map />}</div>
+      <div id="section-container">{show && <Map />}</div>
     </section>
   );
 }
