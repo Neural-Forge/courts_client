@@ -18,25 +18,27 @@ function Map() {
   const [zoom, setZoom] = useState(13);
 
   return (
-    <MapContainer
-      center={position}
-      zoom={zoom}
-      scrollWheelZoom={false}
-      //   style={{ width: "100%", height: "60vh" }}
-      className="map-container"
-    >
-      <TileLayer
-        attribution='&copy; <a href="http://osm.org">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          <span>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </span>
-        </Popup>
-      </Marker>
-    </MapContainer>
+    <section className="maps">
+      <MapContainer
+        center={position}
+        zoom={zoom}
+        scrollWheelZoom={false}
+        //   style={{ width: "100%", height: "60vh" }}
+        className="map-container"
+      >
+        <TileLayer
+          attribution='&copy; <a href="http://osm.org">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>
+            <span>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </span>
+          </Popup>
+        </Marker>
+      </MapContainer>
+    </section>
   );
 }
 
