@@ -55,3 +55,8 @@ button {
   justify-content: center;
   color: white;
 }
+
+.map-container{
+    height: 60vh;
+    width: 100%;
+}

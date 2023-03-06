@@ -4,6 +4,7 @@ export default function Navbar() {
   return (
     <nav>
       <Link to="/chat">Chat</Link>
+      <Link to="/map">Map</Link>
     </nav>
   );
 }

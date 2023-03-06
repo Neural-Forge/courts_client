@@ -1,8 +1,9 @@
-import Leaflet from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useState } from "react";
 import "leaflet/dist/leaflet.css";
 
-Leaflet.Icon.Default.imagePath = "../node_modules/leaflet";
+import Leaflet from "leaflet";
+import React from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 delete Leaflet.Icon.Default.prototype._getIconUrl;
 
@@ -12,19 +13,31 @@ Leaflet.Icon.Default.mergeOptions({
   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
 
-export default function Map() {
-  const position = [51.505, -0.09];
+function Map() {
+  const [position, setPosition] = useState([51.505, -0.09]);
+  const [zoom, setZoom] = useState(13);
+
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+    <MapContainer
+      center={position}
+      zoom={zoom}
+      scrollWheelZoom={false}
+      //   style={{ width: "100%", height: "60vh" }}
+      className="map-container"
+    >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://osm.org">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          <span>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </span>
         </Popup>
       </Marker>
     </MapContainer>
   );
 }
+
+export default Map;
