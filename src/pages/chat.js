@@ -1,5 +1,6 @@
 import "./chat.css";
 import React, { useState } from "react";
+import Map from "../components/map";
 
 export default function Chat() {
   let [show, setShow] = useState(false);
@@ -15,7 +16,7 @@ export default function Chat() {
   return (
     <section>
       <button onClick={handleClik}>Show element</button>
-      <div>{show && <span id="span">This is the element to show.</span>}</div>
+      <div>{show && <Map />}</div>
     </section>
   );
 }
