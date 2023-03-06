@@ -13,10 +13,19 @@ export default function Chat() {
     }
   }
 
+  function Buttons() {
+    return (
+      <div>
+        <button>Generate Report</button>
+      </div>
+    );
+  }
+
   return (
-    <section>
+    <section className="main-container">
       <button onClick={handleClik}>Show element</button>
       <div id="section-container">{show && <Map />}</div>
+      <Buttons />
     </section>
   );
 }
