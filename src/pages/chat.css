@@ -44,9 +44,14 @@ button {
   width: 30vw;
 }
 
-#span {
+.map {
   height: 50vh;
   width: 100vw;
   background-color: #0000ff;
   border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
