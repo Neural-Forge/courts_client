@@ -14,14 +14,6 @@ export default function Chat() {
     }
   }
 
-  function Buttons() {
-    return (
-      <div>
-        <button>Generate Report</button>
-      </div>
-    );
-  }
-
   return (
     <section className="main-container">
       <button onClick={handleClik}>Show element</button>
