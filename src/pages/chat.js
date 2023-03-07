@@ -1,6 +1,7 @@
 import "./chat.css";
 import React, { useState } from "react";
 import Map from "../components/map";
+import Pdf from "../components/pdf";
 
 export default function Chat() {
   let [show, setShow] = useState(false);
@@ -25,7 +26,7 @@ export default function Chat() {
     <section className="main-container">
       <button onClick={handleClik}>Show element</button>
       <div id="section-container">{show && <Map />}</div>
-      <Buttons />
+      <Pdf />
     </section>
   );
 }
