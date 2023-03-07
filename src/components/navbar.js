@@ -5,6 +5,7 @@ export default function Navbar() {
     <nav>
       <Link to="/chat">Chat</Link>
       <Link to="/map">Map</Link>
+      <Link to="/">Home</Link>
     </nav>
   );
 }
